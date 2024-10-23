@@ -8,6 +8,8 @@ def encode_password(password):
             encoded_password += char
     return encoded_password
 
+#put the decode password function here
+
 if __name__ == "__main__":
     keep_running = True
 
@@ -25,7 +27,7 @@ if __name__ == "__main__":
             print("\nYour password:" + password)
 
         elif selection == 2:
-            print("This is partner's job")
+            print("This is my partner's job")
 
         elif selection == 3:
             keep_running = False

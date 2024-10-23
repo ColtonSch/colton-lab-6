@@ -8,7 +8,14 @@ def encode_password(password):
             encoded_password += char
     return encoded_password
 
-#put the decode password function here
+def decode_password(encoded_password):
+    decoded = ""
+    for digit in encoded_password: # subtract 3 from each digit
+        new_digit = (int(digit) - 3) % 10
+        decoded += str(new_digit)
+    return decoded
+
+
 
 if __name__ == "__main__":
     keep_running = True
@@ -27,7 +34,10 @@ if __name__ == "__main__":
             print("\nYour password:" + password)
 
         elif selection == 2:
-            print("This is my partner's job")
+            decoded_password = decode_password(encoded_password)
+            print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
+
+
 
         elif selection == 3:
             keep_running = False
